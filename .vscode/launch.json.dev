@@ -1,0 +1,40 @@
+{
+    // Use IntelliSense para saber los atributos posibles.
+    // Mantenga el puntero para ver las descripciones de los existentes atributos.
+    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "NortFarma - DEV",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/odoo/odoo-bin",
+            "args": [
+                "-c", "${workspaceFolder}/config/odoo.conf",
+                "--dev=all"
+            ],
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/odoo/odoo/addons,${workspaceFolder}/odoo/addons",
+                "OE_INTERNATIONAL": "False",
+                "LANG": "es_PE.UTF-8",
+                "LC_ALL": "es_PE.UTF-8",
+                "TZ": "America/Lima",
+                "ODOO_RC": "${workspaceFolder}/config/odoo.conf",
+                "GEVENT_SUPPORT": "True"
+            },
+            "stopOnEntry": false,
+            "cwd": "${workspaceFolder}",
+            "debugOptions": [
+                "WaitOnAbnormalExit",
+                "WaitOnNormalExit",
+                "RedirectOutput"
+            ],
+            "showReturnValue": true,
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "pythonArgs": [
+                "-Xfrozen_modules=off"
+            ]
+        },
+    ]
+}
