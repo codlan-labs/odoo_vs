@@ -23,11 +23,11 @@ Opcional instalar Postgre SQL completo:
 
 Para clonar un repositorio junto con su submódulo:
 
-    git clone --recurse-submodules --branch 17.0 git@github.com:codlan-labs/odoo_vs.git
+    git clone --recurse-submodules --branch main git@github.com:codlan-labs/odoo_vs.git
 
 O se puede clonar y luego descargar los cambios con los siguiente comandos:
 
-    git clone -b 17.0 git@github.com:codlan-labs/odoo_vs.git
+    git clone -b main git@github.com:codlan-labs/odoo_vs.git
     cd odoo_vs
     git submodule update --init --recursive
 
@@ -112,7 +112,7 @@ Estos comandos cambiarán cada submódulo a la rama principal y luego realizará
 De forma predeterminada, el árbol de trabajo del submódulo no se actualiza para que coincida con el commit registrado en el superproyecto al cambiar de rama. Necesita usar `git submodule update`, o agregar `--recurse-submodules` a checkout:
 
 
-    git checkout 17.0
+    git checkout main
     git submodule update --recursive
 
 o, en un comando (Git >= 2.13)
